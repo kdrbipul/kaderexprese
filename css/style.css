@@ -1,0 +1,594 @@
+/*=================================
+css basic setup start
+=-================================*/
+:root{
+    --primary-color:rgb(11,181,48);
+    --secondary-color:rgba(36,122,55,0.9);
+    --padding:0.5rem;
+    --transition:all 0.3s;
+    --border-radius:0.6rem;
+    --box-shadow:0.1rem 0.2rem 0.8rem rgb(205,202,202,0.5);
+}
+*{
+    box-sizing:borer-box;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    outline:none;
+    text-decoration:none;
+}
+html{
+    scroll-behavior: smooth;
+}
+img{
+    width:100%;
+    height:auto;
+}
+/*=================================
+css basic setup end
+=-================================*/
+/*==============================
+    Common And Reset Code Start
+===============================*/
+.text-center{
+    text-align: center;
+}
+.section_title{
+    font-size: 2em;
+}
+/*================================
+Flex Center
+=================================*/
+    .flex-center{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+/*===============================
+flex around Start
+================================*/
+.flex-space-around{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/*===============================
+flex around End
+================================*/
+.card{
+    box-shadow:var(--box-shadow);
+    border-radius:var(--border-radius);
+    transition: var(--transition);
+    padding:var(--padding);
+}
+.card:hover{
+    box-shadow: 0.1rem 0.2rem 0.8rem rgba(205, 202, 202,1);
+}
+/*==============================
+    Common And Reset Code End
+===============================*/
+/*==============================
+    Button Class Part Start
+===============================*/
+.btn{
+    border:none;
+    padding:var(--padding);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition:var(--transition);
+}
+.btn:hover{
+    background-color:var(--secondary-color);
+    color:white;
+}
+/*================================
+nav-bar css start
+================================*/
+#menu-icon{
+    display:none;
+    transition:all 0.9 ease;
+    opacity:0.5;
+}
+#menu-icon:hover{
+    color:tomato;
+    opacity:1;
+    
+}
+nav{
+    font-family:fantasy;
+    font-size:1.2rem;
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:100;
+}
+.nav-upper{
+    min-height: 10vh;
+    background-color:var(--primary-color);
+    padding:1rem 0;
+}
+.nav_list{
+    transition:var(--transition);
+}
+.nav_list:hover{
+    text-decoration:overline;
+    color:black;
+    cursor: pointer;
+}
+.nav_link{
+    color:white; 
+    transition:var(--transition);
+}
+.nav_link:hover{
+    color:black;
+    cursor: pointer;
+}
+.profile-icon{
+    width:3rem;
+    height:3rem;
+    border-radius:50%;
+    border:1px solid white;
+    filter:saturate(0);
+    transition:var(--transition);
+}
+.profile-icon:hover{
+    filter:saturate(1);
+    cursor: pointer;
+}
+.nav-lower{
+    min-height: 10vh;
+    background-color: var(--secondary-color);
+    font-weight: 500;
+}
+.nav-brand{
+    font-size: 2rem;
+}
+/*===============================
+Nav Bar CSS Part End
+=================================*/
+/*==============================
+Header Section Part Start
+===============================*/
+.header{
+    padding:4rem;
+    height:80vh;
+    background-image: url('/image/n.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+.banner{
+    width:100%;
+    height:100%;
+    flex-direction: column;
+}
+.banner_titile{
+    font-size:4rem;
+    color:yellow;
+    padding:1rem;
+    border-radius:var(--border-radius);
+}
+.features{
+    width:100%;
+}
+.feature{
+    background-color:rgba(80,160,78,0.7);
+    color:white;
+    border-radius:var(--border-radius);
+    padding:1rem;
+    widht:15rem;
+    flex-direction: column;
+    gap:1rem;
+}
+.feature:hover{
+    background-color:gray;
+    color:yellow;
+    cursor: pointer;
+}
+.feature_icon{
+    font-size:3rem;
+}
+/*==============================
+Header Section Part Start
+===============================*/
+/*==============================
+Main Part Start
+===============================*/
+.main{
+    padding:4rem 0;
+    min-height:var(--padding);
+}
+.sidebar{
+    flex:1;
+    padding:var(--padding);
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-self: flex-start;
+}
+.main-content{
+    flex:3;
+    paddigng:var(--padding);
+    align-items: center;
+}
+.actions_sort select{
+    padding:var(--padding);
+}
+.actions_search input{
+    padding:var(--padding);
+    widht:15rem;
+}
+.actions_search button{
+    magrin-left:-1em;
+    border:1px solid;
+    padding:0.55;
+}
+.products{
+    display:grid;
+    grid-template-columns: repeat(3,minmax(0, 1fr));
+    gap:2rem;
+    padding:2rem 0;
+}
+.product{
+    position:relative;
+}
+.badge{
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:green;
+    color:white;
+    padding:4px 8px;
+    text-align:center;
+    border-radius:var(--border-radius);
+    z-index: 10;
+}
+.product_image{
+    width:100%;
+    height:15rem;
+    filter:saturate(0);
+    transition:var(--transition);
+}
+.product_image:hover{
+    filter:saturate(1);
+    cursor: pointer;
+}
+.product_body{
+    padding:var(--padding);
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.hr_design{
+    margin:0.5rem 0;
+}
+.dot{
+    height:2rem;
+    width:2rem;
+    border-radius:50%;
+    display:inline-block;
+}
+.red{
+    background-color:red;
+    border:2px solid green;
+}
+.green{
+    background-color:green;
+    border:2px solid red;
+}
+.black{
+    background-color:black;
+    border:2px solid tomato;
+}
+.learn-more{
+    color:green;
+}
+/*=============================
+    Pagination Button Part Star
+==============================*/
+.pagination{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+.pagination_btn{
+    border-width:1px 1px 1px 0;
+    border-style: solid;
+}
+.pagination_btn:first-child{
+    border-width:1px 1px 1px 1px;
+    border-style: solid;
+}
+
+/*=============================
+    Pagination Button Part End
+==============================*/
+/*============================
+    Product Description Star Here
+==============================*/
+.product_details-left{
+    flex:1;
+    display:grid;
+    grid-template-columns: repeat(1,minmax(0, 1fr));
+}
+.product_details-right{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:0.5em;
+    text-align:justify;
+    display:grid;
+    grid-template-columns: repeat(1,minmax(0, 1fr));
+    width:90%;
+    word-wrap: break-word;
+}
+.product_details-left img{
+    height:20rem;
+    width:30rem;
+    display:grid;
+    grid-template-columns: repeat(1,minmax(0, 1fr));
+
+}
+.product_button{
+    width:100%;
+}
+/*============================
+    Product Description End Here
+==============================*/
+/*============================
+    Cart Part Start Here
+=============================*/
+.cart{
+    padding:var(--padding);
+    gap:1em;
+}
+.cart .card{
+    margin-bottom:1em;
+}
+.cart_items{
+    flex:1;
+}
+.cart_items-action{
+    margin-top:1em;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.cart_item input{
+    flex:0.1;
+}
+.cart_item-image{
+    flex:0.2;
+    width:15em;
+    height:10em;
+}
+.cart_item-description{
+    flex:0.3;
+}
+.cart_item-shipping{
+    color:red;
+    margin-top:0.5em;
+}
+.cart_item-action{
+    flex:0.3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+}
+.cart_payment{
+    flex:1;
+}
+.cart_payment-summary>div{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:1em 0;
+}
+.cart_payment-btn{
+    width:100%;
+}
+.cart_payment-methods>h2{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.cart_payment-methods>div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+}
+/*============================
+    Cart Part End Here
+=============================*/
+/*================================
+    Registration and Login Part Star Here
+==================================*/
+.register, .login{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3em;
+    min-height: 60vh;
+}
+.register .card, .login .card{
+    width:45em;
+}
+.form{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    gap:1em;
+}
+.form-control label{
+    flex:0.1;
+    text-align: left;
+}
+.form-control input, textarea{
+    flex:0.9;
+    padding:var(--padding);
+    border:1px solid;
+    resize:none;
+}
+.form-control textarea{
+    resize:none;
+    height:12vh;
+}
+.form-btn-field{
+    border-radius:var(--border-radius);
+}
+.contact-btn{
+    width:30%;
+}
+/*================================
+    Registration and Login Part End Here
+==================================*/
+/*=================================
+Profile Part Start Here
+==================================*/
+.profile{
+    flex-direction:column;
+    gap:3em;
+}
+.profile .card{
+    padding:var(--padding);
+    width:30em;
+    flex-direction: column;
+    gap:1em;
+}
+.profile-img{
+    height: 258px;
+    width: 249px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+.profile-buttons button{
+    background-color:transparent;
+}
+/*=================================
+Profile Part End Here
+==================================*/
+/*==================================
+Contact Part Start Here
+====================================*/
+.contct-section{
+    min-height:52vh;
+}
+.contact-container{
+    margin-top:5em;
+}
+.contact-address{
+    flex:1;
+    gap:2em;flex-direction: column;
+}
+.contact-map{
+    width:80%;
+    height:50%;
+}
+/*==================================
+Contact Part End Here
+====================================*/
+
+/*==============================
+Main Part End
+===============================*/
+/*===============================
+   Footer part css start
+===============================*/
+.footer{
+    background-color:var(--primary-color);
+    padding:var(--padding);
+    min-height: 10vh;
+    color:white;
+    font-size:1.1rem;
+}
+.btn-subscribe{
+    margin-left:-2px;
+}
+.footer_input{
+    border:none;
+    padding:var(--padding);
+    width:20rem;
+}
+.to-top{
+    background:green;
+    position:fixed;
+    bottom:16px;
+    right:32px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 32px;
+    color:white;
+    text-decoration:none;
+    opacity:0;
+    pointer-events: none;
+    transition: all 0.9s;
+}
+.to-top.active{
+    bottom:32px;
+    pointer-events: auto;
+    opacity:1;
+}
+/*===============================
+Media Queary Work Start
+===============================*/
+@media(max-width:992px){
+    .flex-space-around{
+        flex-direction: column;
+        gap:1.3em;
+        padding:1rem 0;
+    }
+    #menu-icon{
+        display:block;
+        text-align:center;
+        margin:1rem 0;
+        cursor:pointer;
+    }
+    .hidden{
+        display:none;
+    }
+    .header{
+        height:100vh;
+    }
+    .products{
+        grid-template-columns: repeat(2,minmax(0, 1fr));
+    }
+    .product_details{
+        flex-direction: column;
+        padding:10px;
+    }
+    .cart_items, .cart_payment{
+        width:90%;
+    }
+    .register .card, .login .card{
+        width:90%;
+    }
+    .form{
+        width:100%;
+    }
+    .form-control{
+        width:100%;
+    }
+    .form-control input, textarea{
+        width:80%;
+    }
+    .contact-address{
+        width:100%;
+    }
+}
+@media(max-width:768px){
+    .products{
+        grid-template-columns: repeat(1,minmax(0, 1fr));
+    }
+    .flex-center{
+        flex-direction: column;
+        gap:1em;
+        padding:1em 0;
+    }
+}

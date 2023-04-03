@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is a an commerce project for making abdul kader">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>e-commerce</title>
+</head>
+<body>
+    <!--Nva-bar part start here-->
+    <i class="fas fa-bars fa-2x" id="menu-icon"></i>
+    <nav id="menu" class="hidden">
+        <ul class="nav-upper flex-space-around">
+            <li class="nav_list"><a href="index.html" class="nav_link">Home</a></li>
+            <li class="nav_list"><a href="registration.html" class="nav_link">Register</a></li>
+            <li class="nav_list"><a href="login.html" class="nav_link">Login</a></li>
+            <li class="nav_list"><a href="index.html" class="nav_link">Logout</a></li>
+            <li class="nav_list"><a href="contact.html" class="nav_link">Contact</a></li>
+            <li class="nav_list"><a href="profile.html" class="nav_link"><img src="image/kader.png" alt="logo" class="profile-icon"></a></li>
+        </ul>
+        
+        <ul class="nav-lower flex-space-around">
+            <li class="nav_list nav-brand"><a href="index.html" class="nav_link">Kader Exprese</a></li>
+            <li class="nav_list"><a href="index.html" class="nav_link"><span><i class="fa-solid fa-cart-shopping"></i></span>cart 2 products - $124.40</a></li>
+        </ul>
+    </nav>
+    <!--Nva-bar part end here-->
+    <main>
+        <section class="profile flex-center">
+            <h2 class="section_title text-center">User Profile</h2>
+            <div class="card flex-center">
+                <img src="/image/kader.png" alt="profile_img" class="profile-img">
+                <h2 class="profile-name">Md. Abdul Kader</h2>
+                <p class="profile-email">kdrbipul@gmail.com</p>
+                <p class="profile-nm">+8801521389001</p>
+                <div class="profile-buttons">
+                    <button class="btn profile-edit-btn">
+                        <i class="far fa-edit fa-2x"></i>
+                    </button>
+                    <button class="btn profile-edit-btn">
+                        <i class="far fa-trash-alt fa-2x"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!---------------------------
+        Footer Part Start
+    ------------------------------>
+    <footer class="footer flex-space-around">
+        <div class="flex-space-around">
+            <label for="subscribe">Subscribe</label>
+            <input type="email" id="subscribe" name="subscribe" placeholder="Your Email Address" class="footer_input">
+            <button class="btn btn-subscribe">Subscribe</button>
+        </div>
+        <div>
+            <p>&copy; Copyright2023 Kader Express. All reserved</p>
+        </div>
+    </footer>
+    <!---------------------------
+        Footer Part Start
+    ------------------------------>
+    <script scr="./js/main.js">
+        const menuIcon=document.getElementById("menu-icon");
+        const menu=document.getElementById("menu");
+        menuIcon.addEventListener("click",()=>{
+            if(menu.className=="hidden"){
+                menu.classList.remove("hidden");
+            }else{
+                menu.classList.add("hidden");
+            }
+        });
+        const toTop=document.querySelector(".to-top");
+        window.addEventListener("scroll",()=>{
+            if(window.pageYOffset>100){
+                toTop.classList.add("active");
+            }else{
+                toTop.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+</html>

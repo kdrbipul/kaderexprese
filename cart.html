@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is an commerce project for making abdul kader">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>e-commerce</title>
+</head>
+<body>
+    <!--Nva-bar part start here-->
+    <i class="fas fa-bars fa-2x" id="menu-icon"></i>
+    <nav id="menu" class="hidden">
+        <ul class="nav-upper flex-space-around">
+            <li class="nav_list"><a href="index.html" class="nav_link">Home</a></li>
+            <li class="nav_list"><a href="registration.html" class="nav_link">Register</a></li>
+            <li class="nav_list"><a href="login.html" class="nav_link">Login</a></li>
+            <li class="nav_list"><a href="index.html" class="nav_link">Logout</a></li>
+            <li class="nav_list"><a href="contact.html" class="nav_link">Contact</a></li>
+            <li class="nav_list"><a href="profile.html" class="nav_link"><img src="image/kader.png" alt="logo" class="profile-icon"></a></li>
+        </ul>
+        
+        <ul class="nav-lower flex-space-around">
+            <li class="nav_list nav-brand"><a href="index.html" class="nav_link">Kader Exprese</a></li>
+            <li class="nav_list"><a href="index.html" class="nav_link"><span><i class="fa-solid fa-cart-shopping"></i></span>cart 2 products - $124.40</a></li>
+        </ul>
+    </nav>
+    <!--Nva-bar part end here-->
+    <main>
+        <div class="cart flex-center">
+            <div class="cart_items">
+                <div class="cart_items-heading card">
+                    <h2>Shipping cart [2 items]</h2>
+                    <div class="cart_items-action">
+                        <label for="select">
+                            <input type="checkbox" name="select" id="select">
+                            Select all items
+                        </label>
+                        <button class="btn"><i class="fas fa-trash-alt"></i></button>
+                        <button class="btn">Shop more</button>
+                    </div>
+                </div>
+                <div class="cart_item card flex-space-around">
+                    <input type="checkbox" name="" id="">
+                    <img class="cart_item-image" src="/image/p1.jpg" alt="product 1">
+                    <div class="cart_item-description">
+                        <h3 class="product_name">Sony V-4 headphone</h3>
+                        <h4 class="product_price">Price :$255.99</h4>
+                        <p class="cart_item-shipping">Free shipping</p>
+                    </div>
+                    <div class="cart_item-action">
+                        <button class="btn"><i class="fas fa-trash-alt"></i></button>
+                        <div>
+                            <button class="btn"><i class="fas fa-add"></i></button>
+                            <span>3</span>
+                            <button class="btn"><i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart_item card flex-space-around">
+                    <input type="checkbox" name="" id="">
+                    <img class="cart_item-image" src="/image/p2.jpg" alt="product 2">
+                    <div class="cart_item-description">
+                        <h3 class="product_name">Smart Watch</h3>
+                        <h4 class="product_price">Price :$45</h4>
+                        <p class="cart_item-shipping">Shipping cost $5</p>
+                    </div>
+                    <div class="cart_item-action">
+                        <button class="btn"><i class="fas fa-trash-alt"></i></button>
+                        <div>
+                            <button class="btn"><i class="fas fa-add"></i></button>
+                            <span>3</span>
+                            <button class="btn"><i class="fas fa-minus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_payment">
+                <div class="cart_payment-summary card">
+                    <h2>Payment Summary</h2>
+                    <div>
+                        <p>Subtotal</p>
+                        <p>$245.33</p>
+                    </div>
+                    <div>
+                        <p>Shipping Cost</p>
+                        <p>$2.33</p>
+                    </div>
+                    <div>
+                        <p>Total</p>
+                        <p>$247.66</p>
+                    </div>
+                    <button class="btn cart_payment-btn">Pay Now</button>
+                </div>
+                <div class="cart_payment-methods card">
+                    <h2>Payment Methods</h2>
+                    <div>
+                        <i class="fa-brands fa-cc-visa fa-3x"></i>
+                        <i class="fa-brands fa-cc-apple-pay fa-3x"></i>
+                        <i class="fa-brands fa-cc-amex fa-3x"></i>
+                        <i class="fa-brands fa-cc-amazon-pay fa-3x"></i>
+                        <i class="fa-brands fa-cc-paypal fa-3x"></i>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </main>
+    <!---------------------------
+        Footer Part Start
+    ------------------------------>
+    <footer class="footer flex-space-around">
+        <div class="flex-space-around">
+            <label for="subscribe">Subscribe</label>
+            <input type="email" id="subscribe" name="subscribe" placeholder="Your Email Address" class="footer_input">
+            <button class="btn btn-subscribe">Subscribe</button>
+        </div>
+        <div>
+            <p>&copy; Copyright2023 Kader Express. All reserved</p>
+        </div>
+    </footer>
+    <!---------------------------
+        Footer Part Start
+    ------------------------------>
+    <script scr="./js/main.js">
+        const menuIcon=document.getElementById("menu-icon");
+        const menu=document.getElementById("menu");
+        menuIcon.addEventListener("click",()=>{
+            if(menu.className=="hidden"){
+                menu.classList.remove("hidden");
+            }else{
+                menu.classList.add("hidden");
+            }
+        });
+        const toTop=document.querySelector(".to-top");
+        window.addEventListener("scroll",()=>{
+            if(window.pageYOffset>100){
+                toTop.classList.add("active");
+            }else{
+                toTop.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+</html>
